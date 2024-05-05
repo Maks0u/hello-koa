@@ -1,0 +1,32 @@
+{
+  "name": "hello-koa",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Maks0u",
+  "license": "MIT",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js $npm_package_config_port",
+    "dev": "nodemon server.js $npm_package_config_port",
+    "test": "hurl --continue-on-error --error-format long --parallel --test --glob test/hurl/**/*.hurl --variable host=$npm_package_config_hostname:$npm_package_config_port"
+  },
+  "dependencies": {
+    "@koa/bodyparser": "^5.1.1",
+    "@koa/router": "^12.0.1",
+    "http-status-codes": "^2.3.0",
+    "koa": "^2.15.3",
+    "koa-pino-logger": "^4.0.0",
+    "koa-session": "^6.4.0",
+    "pino": "^9.0.0",
+    "pino-pretty": "^11.0.0"
+  },
+  "devDependencies": {
+    "kick-off-koa": "^2.0.0",
+    "nodemon": "^3.1.0"
+  },
+  "config": {
+    "hostname": "localhost",
+    "port": "3000"
+  }
+}

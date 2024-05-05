@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    form {
+      display: flex;
+      flex-flow: column;
+      gap: 0.8rem;
+      width: 250px;
+      label {
+        display: flex;
+        justify-content: space-between;
+        input {
+          width: 150px;
+        }
+      }
+    }
+  </style>
+  <title>koa</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form action="/auth/login" method="post">
+    <label>
+      Username
+      <input name="username" type="text" value="username" />
+    </label>
+    <label>
+      Password
+      <input name="password" type="password" value="password" />
+    </label>
+    <input type="submit" />
+  </form>
+</body>

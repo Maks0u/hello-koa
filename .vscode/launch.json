@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server",
+      "type": "node",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "nodemon",
+      "program": "server.js",
+      "args": ["3000"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
